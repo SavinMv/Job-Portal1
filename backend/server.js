@@ -15,14 +15,25 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Routes
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/jobs', require('./routes/jobs'));
-app.use('/api/applications', require('./routes/applications'));
-app.use('/api/profile', require('./routes/profile'));
+// Routes - wrapped in try/catch to catch import errors
+try {
+  console.log('Loading routes...');
+  app.use('/api/auth', require('./routes/auth'));
+  console.log('Auth routes loaded ✅');
+  app.use('/api/jobs', require('./routes/jobs'));
+  console.log('Jobs routes loaded ✅');
+  app.use('/api/applications', require('./routes/applications'));
+  console.log('Applications routes loaded ✅');
+  app.use('/api/profile', require('./routes/profile'));
+  console.log('Profile routes loaded ✅');
+} catch (err) {
+  console.error('❌ Error loading routes:', err.message);
+  process.exit(1);
+}
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/jobportal')
+console.log('Connecting to MongoDB...');
+mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('✅ MongoDB connected');
     const PORT = process.env.PORT || 10000;
