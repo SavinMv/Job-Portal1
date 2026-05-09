@@ -1,0 +1,32 @@
+.jobs-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 24px;
+}
+.jobs-header h1 { font-size: 28px; }
+.jobs-count { font-size: 14px; color: var(--text-secondary); }
+
+.filters-bar { margin-bottom: 28px; padding: 20px; }
+.filters-form {
+  display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
+}
+.filter-input { flex: 1; min-width: 180px; }
+.filter-select { flex: 0 0 180px; }
+
+.jobs-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+.pagination {
+  display: flex; gap: 8px; justify-content: center; margin-top: 40px;
+}
+.page-btn {
+  width: 38px; height: 38px; border: 1.5px solid var(--border);
+  border-radius: 8px; background: white; cursor: pointer; font-size: 14px;
+  transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+}
+.page-btn:hover { border-color: var(--primary); color: var(--primary); }
+.page-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+
+@media (max-width: 900px) { .jobs-grid-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) {
+  .jobs-grid-3 { grid-template-columns: 1fr; }
+  .filter-input, .filter-select { flex: 1 1 100%; }
+}

@@ -1,0 +1,8 @@
+.post-job-header { margin-bottom: 28px; }
+.post-job-header h1 { font-size: 28px; margin-bottom: 6px; }
+.post-job-header p { color: var(--text-secondary); }
+.post-job-card { max-width: 860px; }
+.form-section { margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+.form-section:last-of-type { border-bottom: none; }
+.form-section h3 { font-size: 16px; font-weight: 600; color: var(--primary); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.05em; }
+.form-actions { display: flex; justify-content: flex-end; gap: 12px; padding-top: 8px; }

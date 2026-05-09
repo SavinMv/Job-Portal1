@@ -1,0 +1,40 @@
+.dashboard-page { background: var(--bg); }
+.dash-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 32px;
+}
+.dash-header h1 { font-size: 28px; margin-bottom: 6px; }
+.dash-header p { color: var(--text-secondary); }
+
+.dash-stats { margin-bottom: 36px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.stat-card { text-align: center; }
+.stat-num { font-size: 36px; font-weight: 700; color: var(--primary); font-family: 'Sora', sans-serif; }
+.stat-label { font-size: 13px; color: var(--text-secondary); margin-top: 4px; }
+
+.dash-section h2 { font-size: 22px; margin-bottom: 16px; }
+
+.employer-jobs { display: flex; flex-direction: column; gap: 12px; }
+.employer-job-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.ej-info h3 { font-size: 16px; margin-bottom: 4px; }
+.ej-info p { font-size: 13px; color: var(--text-secondary); }
+.ej-apps { color: var(--primary) !important; font-weight: 500; }
+.ej-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; flex-shrink: 0; }
+
+.applications-list { display: flex; flex-direction: column; gap: 12px; }
+.application-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.app-info h3 { font-size: 16px; margin-bottom: 4px; }
+.app-company { font-size: 13px; color: var(--text-secondary); margin-bottom: 2px; }
+.app-date { font-size: 12px; color: var(--text-secondary); }
+.app-note { font-size: 13px; color: var(--primary); margin-top: 4px; }
+.app-status { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+
+@media (max-width: 768px) {
+  .dash-header { flex-direction: column; gap: 16px; }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .employer-job-row, .application-row { flex-direction: column; align-items: flex-start; }
+}

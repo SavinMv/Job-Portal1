@@ -1,0 +1,51 @@
+.job-detail-container {
+  display: grid; grid-template-columns: 1fr 340px; gap: 24px; align-items: start;
+}
+.job-detail-main { display: flex; flex-direction: column; gap: 20px; }
+.job-detail-sidebar { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 20px; }
+
+.jd-header { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
+.jd-company-logo {
+  width: 56px; height: 56px; border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), #6B8EFF);
+  color: white; display: flex; align-items: center; justify-content: center;
+  font-size: 24px; font-weight: 700; font-family: 'Sora', sans-serif; flex-shrink: 0;
+}
+.jd-info h1 { font-size: 24px; margin-bottom: 4px; }
+.jd-company { color: var(--text-secondary); margin-bottom: 10px; }
+.jd-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.apply-form {
+  margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border);
+}
+.apply-form h3 { font-size: 18px; margin-bottom: 16px; }
+.apply-actions { display: flex; gap: 12px; }
+
+.section-title { font-size: 18px; margin: 20px 0 12px; }
+.section-title:first-child { margin-top: 0; }
+.job-text { font-size: 15px; color: var(--text-secondary); line-height: 1.8; white-space: pre-wrap; }
+.skill-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-tag { padding: 5px 12px; background: var(--primary-light); color: var(--primary); border-radius: 20px; font-size: 13px; }
+
+.sidebar-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 16px; }
+.overview-list { display: flex; flex-direction: column; gap: 14px; }
+.overview-item { display: flex; gap: 12px; align-items: flex-start; font-size: 18px; }
+.overview-item div strong { display: block; font-size: 13px; font-weight: 500; }
+.overview-item div p { font-size: 14px; color: var(--text-secondary); }
+
+.company-info { text-align: center; }
+.company-logo-lg {
+  width: 64px; height: 64px; border-radius: 16px;
+  background: linear-gradient(135deg, var(--primary), #6B8EFF);
+  color: white; display: flex; align-items: center; justify-content: center;
+  font-size: 28px; font-weight: 700; margin: 0 auto 12px;
+}
+.company-info h4 { font-size: 18px; margin-bottom: 4px; }
+.industry { font-size: 13px; color: var(--primary); font-weight: 500; margin-bottom: 10px; }
+.company-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px; }
+.company-link { margin-top: 4px; }
+
+@media (max-width: 900px) {
+  .job-detail-container { grid-template-columns: 1fr; }
+  .job-detail-sidebar { position: static; }
+}
