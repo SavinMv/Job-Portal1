@@ -20,8 +20,8 @@ app.use('/api/profile', require('./routes/profile'));
 mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/jobportal')
   .then(() => {
     console.log('✅ MongoDB connected');
-    app.listen(process.env.PORT || 5000, () => {
-      console.log(`🚀 Server running on port ${process.env.PORT || 5000}`);
+    app.listen(process.env.PORT || 10000, () => {
+      console.log(`🚀 Server running on port ${process.env.PORT || 10000}`);
     });
   })
   .catch(err => console.error('MongoDB error:', err));
